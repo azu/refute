@@ -1,7 +1,7 @@
 {
   "name": "refute",
   "description": "refure assertion library(refute is referee's \"assert.not*\")",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/azu/refute/",
   "repository": {
     "type": "git",
