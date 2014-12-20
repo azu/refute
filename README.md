@@ -23,7 +23,6 @@ var refute = require("refute")(assert);
 
 ```js
 refute(false);
-// inherit from assert
 refute.equal = assert.notEqual.bind(assert);
 refute.strictEqual = assert.notStrictEqual.bind(assert);
 refute.deepEqual = assert.notDeepEqual.bind(assert);
