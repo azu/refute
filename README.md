@@ -63,14 +63,45 @@ describe("refute-test", function () {
 
 You can use `refute` with [power-assert](https://github.com/twada/power-assert "power-assert").
 
-Simply a change.
+1. Change `require("assert")` to ` require("power-assert")`
 
 ```diff
 - var assert = require("assert");
 + var assert = require("power-assert");
 ```
 
-Automatically, change espower's [options.patterns](https://github.com/twada/espower#optionspatterns "options.patterns").
+2. Add `refute.*` methods to espower's [options.patterns](https://github.com/twada/espower#optionspatterns "options.patterns").
+
+```js
+require('espower-loader')({
+
+    // directory where match starts with
+    cwd: process.cwd(),
+
+    // glob pattern using minimatch module
+    pattern: 'test/**/*.js',
+
+    // options for espower module
+    espowerOptions: {
+        patterns: [
+            "assert(value, [message])",
+            "refute(value, [message])",
+            "assert.ok(value, [message])",
+            "assert.equal(actual, expected, [message])",
+            "refute.equal(actual, expected, [message])",
+            "assert.notEqual(actual, expected, [message])",
+            "assert.strictEqual(actual, expected, [message])",
+            "refute.strictEqual(actual, expected, [message])",
+            "assert.notStrictEqual(actual, expected, [message])",
+            "assert.deepEqual(actual, expected, [message])",
+            "refute.deepEqual(actual, expected, [message])",
+            "assert.notDeepEqual(actual, expected, [message])"
+        ]
+    }
+});
+```
+
+See [espower.config.js](test/espower.config.js) of example.
 
 ## Contributing
 
