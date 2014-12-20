@@ -1,4 +1,4 @@
-# refute
+# refute [![Build Status](https://travis-ci.org/azu/refute.svg?branch=master)](https://travis-ci.org/azu/refute)
 
 refute is "assert.not*" assertion library.
 
