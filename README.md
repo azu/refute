@@ -101,7 +101,7 @@ require('espower-loader')({
 });
 ```
 
-See [espower.config.js](test/espower.config.js) of example.
+See [espower.config.js](test/espower.config.js) and [mocha.opts](test/mocha.opts) of example.
 
 ## Contributing
 
